@@ -9,10 +9,20 @@
 		<meta name="viewport" content="width=device-width, user-scalable=no">
 		
 		<link href="style.css" rel="stylesheet" type="text/css">
+<<<<<<< HEAD
 	</head>
 
 	<body>
 			<!-- This is the top bit with the image. 
+=======
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	</head>
+
+	<body>
+	<style>
+	
+	</style>		<!-- This is the top bit with the image. 
+>>>>>>> b3dacea09ff430bf4988b594f3098ed8216df35c
 		I wonder why there's no image tag here? -->
 		<div class="whitebit"></div>
 
@@ -22,7 +32,11 @@
 			<div id="button">Refresh GPS: <div id="timer"></div></div>
 
 			<div class="area">
+<<<<<<< HEAD
 				<div class="box box1"><div class="latitude"></div></div>
+=======
+				<div class="box box1"><div class="latitude">Blah</div></div>
+>>>>>>> b3dacea09ff430bf4988b594f3098ed8216df35c
 				<div class="box box2"><div class="longitude"></div></div>
 			</div>
 
@@ -30,12 +44,52 @@
 
 		<!-- Let's put in a timer here -->
 		<script type="text/javascript">
+<<<<<<< HEAD
+=======
+		var count = 30;
+		var counter = setInterval(timer, 1000); 
+		
+		function timer() {
+		    count = count - 1;
+		    if (count <= 0) {
+		        clearInterval(counter);
+		        alert("Boom!");
+		        document.getElementById('button').style.visibility = 'hidden';
+		        return;
+		    }
+		
+		    document.getElementById("timer").innerHTML = count + " secs";
+		}
+>>>>>>> b3dacea09ff430bf4988b594f3098ed8216df35c
 
 		</script>
 		
 		<!-- Let's put in the geolocation stuff here -->
 		<script type="text/javascript">
+<<<<<<< HEAD
 		
+=======
+		$(function () {
+    $("#button").click(function () {
+        getLocation();
+    });
+});
+
+function getLocation() {
+    if (navigator.geolocation) {
+       navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        alert("Geolocation is not supported by this browser.");
+    }
+}
+
+function showPosition(position) {
+    $(".box1").html(position.coords.latitude);
+    $(".box2").html(position.coords.longitude);
+} 
+
+getLocation();
+>>>>>>> b3dacea09ff430bf4988b594f3098ed8216df35c
 		</script>
 	</body>
 </html>

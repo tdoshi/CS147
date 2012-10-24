@@ -20,7 +20,11 @@
 			<div id="button">Refresh GPS: <div id="timer"></div></div>
 
 			<div class="area">
+<<<<<<< HEAD
 				<div class="box box1"><div class="latitude">Blah</div></div>
+=======
+				<div class="box box1"><div class="latitude"></div></div>
+>>>>>>> b3dacea09ff430bf4988b594f3098ed8216df35c
 				<div class="box box2"><div class="longitude"></div></div>
 			</div>
 
